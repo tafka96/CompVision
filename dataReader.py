@@ -12,7 +12,7 @@ with open('data/fer2013.csv', 'r') as file:
         pixels = row[1]
         pix_array = np.array(pixels.split())
         pix_array = pix_array.astype('int32')
-        pix_array = np.reshape(pix_array, (48, 48, 1))
+        pix_array = np.reshape(pix_array, (48, 48))
         if row[2] == 'Training':
             train_X.append(pix_array)
             train_Y.append(int(row[0]))
